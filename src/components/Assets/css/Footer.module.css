@@ -1,0 +1,32 @@
+.footer {
+    background-color: #1e3269;
+    color: white;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container {
+    margin: 20px 0;
+    display: grid;
+    grid-template-rows: 20px 20px 20px;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.brand {
+    font-size: 14px;
+}
+.payLink {
+    justify-content: center;
+    display: flex;
+}
+.payment {
+    margin-right: 8px;
+}
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    margin-right: 15px;
+}

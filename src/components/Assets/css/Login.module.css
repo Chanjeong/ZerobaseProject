@@ -1,0 +1,114 @@
+.loginContainer {
+    margin-top: 130px;
+    font-size: 30px;
+    padding: 0 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginTitle {
+    text-align: center;
+}
+.inputContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.idContainer,
+.passwordContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.labelId,
+.labelPassword {
+    font-size: 20px;
+}
+
+.inputId,
+.inputPassword {
+    width: 350px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.inputId:focus,
+.inputPassword:focus {
+    outline: none;
+}
+.socialLogin {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.buttonContainer {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.googleButton,
+.submitButton,
+.toRegisterButton {
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+}
+.googleButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 50px;
+}
+.google {
+    margin-left: 5px;
+}
+.submitButton,
+.toRegisterButton {
+    background-color: #1e3269;
+}
+.submitButton {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.toRegisterButton {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.toRegister {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .loginContainer {
+        padding: 0 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    .inputId,
+    .inputPassword {
+        width: auto;
+    }
+
+    .buttonContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .submitButton,
+    .toRegisterButton {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

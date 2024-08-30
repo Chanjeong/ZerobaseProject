@@ -1,0 +1,44 @@
+.mainContainer {
+    margin: 50px;
+}
+.mainTitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.accountContainer {
+    display: flex;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    padding: 30px;
+    justify-content: space-between;
+}
+.accountOwner {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.bankInfo {
+    display: flex;
+    font-size: 20px;
+}
+.accountBank {
+    margin-right: 10px;
+}
+.accountTotal {
+    font-size: 20px;
+}
+.createAccount {
+    float: right;
+}
+.toCreate {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .bankInfo {
+        display: none;
+    }
+}

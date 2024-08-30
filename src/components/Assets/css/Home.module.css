@@ -1,0 +1,25 @@
+.home {
+    flex: 1;
+    position: relative;
+    background-image: url(../images/homeImage.jpg);
+    background-size: 100% 100%;
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.home_wrapper {
+    position: relative;
+    z-index: 2;
+    padding: 100px;
+    font-size: 30px;
+    color: white;
+}

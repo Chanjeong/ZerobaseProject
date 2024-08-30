@@ -1,0 +1,38 @@
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1e3269;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.homeLink,
+.loginLogoutLink,
+.registerLink,
+.mainLink {
+    text-decoration: none;
+    color: inherit;
+}
+.titleLogo {
+    margin-right: 20px;
+}
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.tabs {
+    display: flex;
+    font-size: 25px;
+}
+.mainTab,
+.loginTab {
+    margin-right: 20px;
+}
+@media (max-width: 768px) {
+    .title {
+        display: none;
+    }
+}

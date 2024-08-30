@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "f174",
+      "username": "ckswjd3549",
+      "name": "박찬정",
+      "password": "12345",
+      "account": [
+        {
+          "id": "5dcfde97-03be-46a7-ba19-758a53c95302",
+          "bank": "신한",
+          "accountNum": "39910104045733",
+          "money": 278654,
+          "password": "123456",
+          "transaction": []
+        },
+        {
+          "id": "0aa88e01-dea5-43af-bab0-1140e52e79ff",
+          "bank": "IBK기업",
+          "accountNum": "01095953465123",
+          "money": 557433,
+          "password": "354900",
+          "transaction": []
+        }
+      ]
+    }
+  ]
+}

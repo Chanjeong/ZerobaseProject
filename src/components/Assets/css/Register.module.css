@@ -1,0 +1,117 @@
+.registerContainer {
+    margin-top: 130px;
+    font-size: 30px;
+    padding: 0 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.registerTitle {
+    text-align: center;
+}
+
+.inputContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.idContainer,
+.nameContainer,
+.passwordContainer,
+.passwordReContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.labelId,
+.labelName,
+.labelPassword,
+.labelPasswordRe {
+    font-size: 20px;
+}
+
+.inputId,
+.inputName,
+.inputPassword,
+.inputPasswordRe {
+    width: 350px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.inputId:focus,
+.inputName:focus,
+.inputPassword:focus,
+.inputPasswordRe:focus {
+    outline: none;
+}
+
+.buttonContainer {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.registerButton {
+    background-color: #1e3269;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.keyboardContainer {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.key {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+}
+
+.inputPasswordRe:focus + .keyboardContainer {
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .registerContainer {
+        padding: 0 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    .inputId,
+    .inputPassword,
+    .inputName,
+    .inputPasswordRe {
+        width: auto;
+    }
+
+    .registerButton {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
