@@ -8,13 +8,13 @@ export default function Nav() {
     const { loggedIn, setLoggedIn } = useLogin();
 
     useEffect(() => {
-        const loggedInStatus = localStorage.getItem('loggedIn');
+        const loggedInStatus = sessionStorage.getItem('loggedIn');
         setLoggedIn(loggedInStatus === 'true');
     }, [setLoggedIn]);
 
     const handleLoginLogout = () => {
         if (loggedIn) {
-            localStorage.removeItem('loggedIn');
+            sessionStorage.removeItem('loggedIn');
             setLoggedIn(false);
         }
     };

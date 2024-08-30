@@ -106,7 +106,7 @@ export default function CreateAccount() {
     };
     return (
         <div className={styles.createContainer}>
-            <div className={styles.createTitle}>회원가입</div>
+            <div className={styles.createTitle}>계좌 연결</div>
             <form className={styles.inputContainer} onSubmit={handleSubmit}>
                 <div className={styles.bankContainer}>
                     <label htmlFor="name" className={styles.labelBank}>

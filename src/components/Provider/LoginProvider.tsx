@@ -16,8 +16,8 @@ export function LoginProvider({ children }: { children: ReactNode }) {
     const [loggedInUser, setLoggedInUser] = useState<UserInfo | null>(null);
 
     useEffect(() => {
-        const storedLoggedIn = localStorage.getItem('loggedIn') === 'true';
-        const storedUser = localStorage.getItem('loggedInUser');
+        const storedLoggedIn = sessionStorage.getItem('loggedIn') === 'true';
+        const storedUser = sessionStorage.getItem('loggedInUser');
         if (storedLoggedIn && storedUser) {
             setLoggedInUser(JSON.parse(storedUser));
         }

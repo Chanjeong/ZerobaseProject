@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import styles from '../Assets/css/Login.module.css';
-import React, { FormEvent, ChangeEvent, useState, useEffect } from 'react';
+import React, { FormEvent, ChangeEvent, useState } from 'react';
 import { useLogin } from '../Provider/LoginProvider';
 import { useUser } from '../Provider/UserProvider';
 
@@ -10,7 +10,7 @@ import { useUser } from '../Provider/UserProvider';
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const { setLoggedIn, setLoggedInUser, loggedInUser } = useLogin();
+    const { setLoggedIn, setLoggedInUser } = useLogin();
     const { user } = useUser();
     const navigate = useNavigate();
 
@@ -29,8 +29,8 @@ export default function Login() {
 
         if (verifiedUser) {
             alert('제로베이스 뱅크에 오신걸 환영합니다');
-            localStorage.setItem('loggedIn', 'true');
-            localStorage.setItem('loggedInUser', JSON.stringify(verifiedUser));
+            sessionStorage.setItem('loggedIn', 'true');
+            sessionStorage.setItem('loggedInUser', JSON.stringify(verifiedUser));
             setLoggedIn(true);
             setLoggedInUser(verifiedUser);
             navigate('/main');

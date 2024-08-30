@@ -16,7 +16,13 @@ export interface AccountInfo {
     bank: string;
     money: number;
     password: string;
-    transaction: string[];
+    transaction: transactionInfo[];
+}
+interface transactionInfo {
+    date: Date;
+    to: string;
+    type: 'transfer' | 'deposit';
+    money: number;
 }
 
 interface UserProps {

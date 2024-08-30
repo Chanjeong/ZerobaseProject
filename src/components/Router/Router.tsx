@@ -5,6 +5,7 @@ import Register from '../Views/Register';
 import Main from '../Views/Main';
 import PrivateRoute from '../Views/PrivateRoute';
 import CreateAccount from '../Views/CreateAccount';
+import AccountDetail from '../Views/AccountDetail';
 
 export default function Router() {
     return (
@@ -15,6 +16,7 @@ export default function Router() {
             <Route element={<PrivateRoute />}>
                 <Route path="/main" element={<Main />} />
                 <Route path="/main/create" element={<CreateAccount />} />
+                <Route path="/main/:id" element={<AccountDetail />} />
             </Route>
         </Routes>
     );
