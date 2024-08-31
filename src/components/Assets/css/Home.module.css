@@ -2,7 +2,13 @@
     flex: 1;
     position: relative;
     background-image: url(../images/homeImage.jpg);
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .home::after {
@@ -19,7 +25,31 @@
 .home_wrapper {
     position: relative;
     z-index: 2;
-    padding: 100px;
+    padding: 50px 100px;
     font-size: 30px;
-    color: white;
+    color: #ffffff;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .home_wrapper {
+        padding: 30px 50px;
+        font-size: 20px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

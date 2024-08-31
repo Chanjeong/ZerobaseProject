@@ -56,6 +56,49 @@
     padding: 10px;
     transition: background-color 0.3s ease;
 }
+
 .sendButton:hover {
     background-color: rgb(230, 230, 1);
+}
+
+.transactionItem {
+    display: flex;
+    padding: 20px 30px;
+    margin: 20px 0;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transactionItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.date,
+.receiver,
+.money {
+    flex: 1;
+    align-self: center;
+}
+
+.receiver {
+    text-align: center;
+    font-weight: 500;
+    color: #555;
+}
+
+.money {
+    text-align: right;
+    font-weight: 600;
+    color: #333;
+}
+
+.deposit,
+.transfer {
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 14px;
 }

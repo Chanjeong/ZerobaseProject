@@ -1,12 +1,13 @@
 import styles from '../Assets/css/AccountDetail.module.css';
 import { useLogin } from '../Provider/LoginProvider';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export default function AccountDetail() {
     const { id } = useParams<{ id: string }>();
     const { loggedInUser } = useLogin();
 
     const account = loggedInUser?.account.find((v) => v.id === id);
+
     return (
         <div className={styles.detailContainer}>
             <div className={styles.budgetContainer}>
@@ -27,11 +28,25 @@ export default function AccountDetail() {
             <div className={styles.transactionContainer}>
                 <div className={styles.header}>
                     <div className={styles.title}>지출내역</div>
-                    <button className={styles.sendButton}>송금</button>
+                    <Link to={`/main/${id}/send`}>
+                        <button className={styles.sendButton}>송금</button>
+                    </Link>
                 </div>
-                <div className={styles.transactionList}>
+                <div className={styles.transactionLists}>
                     {account?.transaction.map((t) => (
-                        <div className={styles.transactionContainer}>{t.type}</div>
+                        <div className={styles.transactionItem}>
+                            <div className={styles.date}>{new Date(t.date).toLocaleString()}</div>
+                            <div className={styles.receiver}>{t.name}</div>
+                            {t.type === 'transfer' ? (
+                                <div className={styles.money}>
+                                    출금 <span style={{ color: '#e74c3c' }}>{t.money.toLocaleString()}</span>원
+                                </div>
+                            ) : (
+                                <div className={styles.money}>
+                                    입금 <span style={{ color: '#3498db' }}>{t.money.toLocaleString()}</span>원
+                                </div>
+                            )}
+                        </div>
                     ))}
                 </div>
             </div>

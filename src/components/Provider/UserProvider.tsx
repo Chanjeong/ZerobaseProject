@@ -20,7 +20,8 @@ export interface AccountInfo {
 }
 interface transactionInfo {
     date: Date;
-    to: string;
+    name: string;
+    account: string;
     type: 'transfer' | 'deposit';
     money: number;
 }
