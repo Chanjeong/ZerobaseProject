@@ -18,7 +18,7 @@ export interface AccountInfo {
     password: string;
     transaction: transactionInfo[];
 }
-interface transactionInfo {
+export interface transactionInfo {
     date: Date;
     name: string;
     account: string;

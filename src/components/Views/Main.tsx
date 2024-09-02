@@ -24,8 +24,8 @@ export default function Main() {
             <div className={styles.mainTitle}>연결된 계좌</div>
             <div className={styles.accountList}>
                 {loggedInUser?.account.map((v) => (
-                    <Link className={styles.toDetail} to={`/main/${v.id}`}>
-                        <div className={styles.accountContainer} key={v.id}>
+                    <Link className={styles.toDetail} to={`/main/${v.id}`} key={v.id}>
+                        <div className={styles.accountContainer}>
                             <div className={styles.accountOwner}>{loggedInUser.name}</div>
                             <div className={styles.bankInfo}>
                                 <div className={styles.accountBank}>{v.bank}</div>

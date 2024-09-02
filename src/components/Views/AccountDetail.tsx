@@ -34,7 +34,7 @@ export default function AccountDetail() {
                 </div>
                 <div className={styles.transactionLists}>
                     {account?.transaction.map((t) => (
-                        <div className={styles.transactionItem}>
+                        <div className={styles.transactionItem} key={new Date(t.date).toLocaleString()}>
                             <div className={styles.date}>{new Date(t.date).toLocaleString()}</div>
                             <div className={styles.receiver}>{t.name}</div>
                             {t.type === 'transfer' ? (
