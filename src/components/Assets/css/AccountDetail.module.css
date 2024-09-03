@@ -42,6 +42,11 @@
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.titleContainer {
+    display: flex;
+    align-items: center;
 }
 .title {
     font-size: 25px;
@@ -59,6 +64,25 @@
 
 .sendButton:hover {
     background-color: rgb(230, 230, 1);
+}
+
+.filterContainer {
+    align-items: right;
+}
+.filterSelect {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #333;
+}
+
+.filterSelect:focus {
+    outline: none;
 }
 
 .transactionItem {
@@ -101,4 +125,13 @@
     margin-right: 10px;
     font-weight: 600;
     font-size: 14px;
+}
+.analyzeButton {
+    display: flex;
+    text-align: center;
+    justify-content: cecnter;
+    text-decoration: none;
+    font-size: 18px;
+    color: inherit;
+    float: right;
 }

@@ -60,8 +60,6 @@ export default function Send() {
             alert('받는 사람의 계좌를 찾을 수 없습니다.');
             return;
         }
-        if (senderAccount) {
-        }
 
         if (senderAccount.money < Number(money)) {
             alert('잔액이 부족합니다.');
@@ -71,10 +69,6 @@ export default function Send() {
         try {
             const senderNewBalance = senderAccount.money - Number(money);
             const recipientNewBalance = recipientAccount.money + Number(money);
-
-            if (!loggedInUser?.id) {
-                throw new Error('로그인된 사용자 ID가 유효하지 않습니다.');
-            }
 
             const updatedSender: UserInfo = {
                 ...loggedInUser!,

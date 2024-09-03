@@ -7,6 +7,7 @@ import PrivateRoute from '../Views/PrivateRoute';
 import CreateAccount from '../Views/CreateAccount';
 import AccountDetail from '../Views/AccountDetail';
 import Send from '../Views/Send';
+import Chart from '../Views/Chart';
 
 export default function Router() {
     return (
@@ -19,6 +20,7 @@ export default function Router() {
                 <Route path="/main/create" element={<CreateAccount />} />
                 <Route path="/main/:id" element={<AccountDetail />} />
                 <Route path="/main/:id/send" element={<Send />} />
+                <Route path="/main/:id/chart" element={<Chart />} />
             </Route>
         </Routes>
     );
