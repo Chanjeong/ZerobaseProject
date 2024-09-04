@@ -51,6 +51,8 @@
 }
 
 .googleButton,
+.kakaoButton,
+.naverButton,
 .submitButton,
 .toRegisterButton {
     border: none;
@@ -61,14 +63,24 @@
     font-weight: 700;
     font-size: 16px;
 }
-.googleButton {
+.googleButton,
+.kakaoButton,
+.naverButton {
     display: flex;
+    flex: 1;
+    align-items: center;
     justify-content: center;
     align-items: center;
     color: black;
     border-radius: 50px;
 }
-.google {
+.googleButton {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.google,
+.kakao,
+.naver {
     margin-left: 5px;
 }
 .submitButton,

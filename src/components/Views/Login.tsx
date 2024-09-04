@@ -1,12 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
+import { SiKakaotalk } from 'react-icons/si';
+import { SiNaver } from 'react-icons/si';
 import styles from '../Assets/css/Login.module.css';
-import React, { FormEvent, ChangeEvent, useState } from 'react';
+import { FormEvent, ChangeEvent, useState } from 'react';
 import { useLogin } from '../Provider/LoginProvider';
 import { useUser } from '../Provider/UserProvider';
 
 //json-server --watch ./src/components/Data/db.json --port 3001
-
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -39,15 +40,6 @@ export default function Login() {
         }
     };
 
-    // const handleGoogleLogin = () => {
-    //     window.location.href =
-    //         `https://accounts.google.com/o/oauth2/v2/auth?` +
-    //         `client_id=789337969113-n63a76b4qnlfnibcq8enov3uhbu4vq02.apps.googleusercontent.com` +
-    //         `&redirect_uri=http://localhost:3000/loading` +
-    //         `&response_type=code` +
-    //         `&scope=email profile`;
-    // };
-
     return (
         <div className={styles.loginContainer}>
             <div className={styles.loginTitle}>로그인</div>
@@ -79,9 +71,17 @@ export default function Login() {
                     />
                 </div>
                 <div className={styles.socialLogin}>
+                    <button type="button" className={styles.kakaoButton}>
+                        <SiKakaotalk size={18} style={{ color: 'yellow', backgroundColor: 'black' }} />
+                        <p className={styles.kakao}>Kakao</p>
+                    </button>
                     <button type="button" className={styles.googleButton}>
-                        <FcGoogle className={styles.googleIcon} size={18} />
+                        <FcGoogle size={18} />
                         <p className={styles.google}>Google</p>
+                    </button>
+                    <button type="button" className={styles.naverButton}>
+                        <SiNaver size={18} color="#03C161" />
+                        <p className={styles.naver}>Naver</p>
                     </button>
                 </div>
                 <div className={styles.buttonContainer}>

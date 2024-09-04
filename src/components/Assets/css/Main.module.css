@@ -14,6 +14,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
     border: 1px solid #dddddd;
     border-radius: 8px;
@@ -28,6 +29,12 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+.accountOwner,
+.bankInfo,
+.accountTotal {
+    flex: 1;
+}
+
 .accountOwner {
     font-size: 20px;
     font-weight: bold;
@@ -36,6 +43,7 @@
 
 .bankInfo {
     display: flex;
+    justify-content: center;
     font-size: 18px;
     color: #888888;
 }
@@ -49,6 +57,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #007bff;
+    text-align: right;
 }
 
 .createAccount {
