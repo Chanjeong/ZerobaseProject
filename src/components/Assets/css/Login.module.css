@@ -98,7 +98,7 @@
     transition: background-color 0.3s ease;
 }
 .toRegisterButton:hover,
-.toSubmitButton:hover {
+.submitButton:hover {
     background-color: #2d4b9e;
 }
 .toRegister {

@@ -60,6 +60,7 @@
     border-radius: 5px;
     padding: 10px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .sendButton:hover {
@@ -134,4 +135,7 @@
     font-size: 18px;
     color: inherit;
     float: right;
+}
+.chartIcon:hover {
+    color: red;
 }

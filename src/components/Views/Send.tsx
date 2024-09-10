@@ -168,7 +168,7 @@ export default function Send() {
                 </div>
                 <div className={styles.moneyContainer}>
                     <label htmlFor="money" className={styles.labelMoney}>
-                        돈:
+                        금액:
                     </label>
                     <input
                         type="money"

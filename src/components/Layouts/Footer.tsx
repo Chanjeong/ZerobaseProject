@@ -28,7 +28,7 @@ export default function Footer() {
                     <a href="https://www.instagram.com/zerobase.official">
                         <FaInstagram color="white" />
                     </a>
-                    <a href="https://github.com/oinochoe">
+                    <a href="https://github.com/Chanjeong">
                         <FaGithub color="white" />
                     </a>
                 </div>

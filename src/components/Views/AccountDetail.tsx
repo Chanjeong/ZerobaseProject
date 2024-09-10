@@ -94,7 +94,7 @@ export default function AccountDetail() {
                 </div>
             </div>
             <Link to={`/main/${id}/chart`} className={styles.analyzeButton} aria-label="차트로 분석하기">
-                <FaRegChartBar size={30} />
+                <FaRegChartBar size={30} className={styles.chartIcon} />
             </Link>
         </div>
     );
