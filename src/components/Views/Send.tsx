@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import styles from '../Assets/css/Send.module.css';
-import { transactionInfo, UserInfo, useUser } from '../Provider/UserProvider';
+import { UserInfo, useUser } from '../Provider/UserProvider';
 import { ChangeEvent, FormEvent, KeyboardEvent, useState } from 'react';
 import { useLogin } from '../Provider/LoginProvider';
 import axios from 'axios';

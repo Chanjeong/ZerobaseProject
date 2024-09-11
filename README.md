@@ -7,19 +7,24 @@
 
 ## Installation
 
-`npm start`를 하면 되고, Data폴더에 `db.json`이 있는데 같이 실행을 시켜야 해서 같이 실행이 되게 설정을 해놨습니다.
+`npm start`를 하면 되고, Data폴더에 `db.json`이 있는데 같이 실행을 시켜야 해서 같이 실행이 되게 설정을 해놨습니다. json-server --watch ./src/components/Data/db.json --port 3001
 
 ## Project Doc
 
 ### Built With
 
-| package name | version |
-| ------------ | ------- |
-| React        | 18.3.1  |
-| typescript   | 4.9.5   |
-| axios        | 1.7.5   |
-| clsx         | 2.1.1   |
-| chart.js     | 4.4.4   |
+| package name     | version |
+| ---------------- | ------- |
+| React            | 18.3.1  |
+| typescript       | 4.9.5   |
+| axios            | 1.7.5   |
+| clsx             | 2.1.1   |
+| chart.js         | 4.4.4   |
+| react-chartjs-2  | 5.2.0   |
+| uuid             | 10.0.0  |
+| react-dom        | 18.3.1  |
+| react-icons      | 5.3.0   |
+| react-router-dom | 6.26.1  |
 
 ### Pages
 

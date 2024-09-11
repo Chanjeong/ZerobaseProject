@@ -7,7 +7,6 @@ import { FormEvent, ChangeEvent, useState } from 'react';
 import { useLogin } from '../Provider/LoginProvider';
 import { useUser } from '../Provider/UserProvider';
 
-//json-server --watch ./src/components/Data/db.json --port 3001
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -71,6 +70,7 @@ export default function Login() {
                     />
                 </div>
                 <div className={styles.socialLogin}>
+                {/* 소셜로그인 구현은 아직 안되고 일단 버튼만 만들어 놨습니다. */}
                     <button type="button" className={styles.kakaoButton}>
                         <SiKakaotalk size={18} style={{ color: 'yellow', backgroundColor: 'black' }} />
                         <p className={styles.kakao}>Kakao</p>

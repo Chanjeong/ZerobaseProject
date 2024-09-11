@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './components/Assets/css/App.module.css';
 import { BrowserRouter } from 'react-router-dom';
 import Nav from './components/Layouts/Nav';
