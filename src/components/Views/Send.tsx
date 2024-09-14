@@ -11,7 +11,7 @@ export default function Send() {
     const [money, setMoney] = useState('');
     const [password, setPassword] = useState('');
     const { id } = useParams<{ id: string }>();
-    const { user } = useUser();
+    const { user, setUser } = useUser();
     const { loggedInUser, setLoggedInUser } = useLogin();
     const navigate = useNavigate();
 
@@ -53,6 +53,7 @@ export default function Send() {
         }
         if (senderAccount.password !== password) {
             alert('비밀번호를 확인하세요');
+            return;
         }
 
         const recipientAccount = recipientUser.account.find((a) => a.accountNum === account);
@@ -114,10 +115,13 @@ export default function Send() {
                 ),
             };
 
-            await axios.put(`http://localhost:3001/users/${loggedInUser?.id}`, updatedSender);
-            await axios.put(`http://localhost:3001/users/${recipientUser.id}`, updatedRecipient);
+            await axios.patch(`http://localhost:3001/users/${loggedInUser?.id}`, updatedSender);
+            await axios.patch(`http://localhost:3001/users/${recipientUser.id}`, updatedRecipient);
 
             setLoggedInUser(updatedSender);
+
+            const updatedUsers = user.map((u) => (u.id === recipientUser.id ? updatedRecipient : u));
+            setUser(updatedUsers);
 
             alert('송금이 완료되었습니다.');
             navigate(`/main/${id}`);
