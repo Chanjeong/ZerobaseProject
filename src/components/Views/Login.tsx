@@ -24,6 +24,11 @@ export default function Login() {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        console.log('Username:', username);
+        console.log('Password:', password);
+
+        // user 데이터가 정상적으로 로드되었는지 확인
+        console.log('User Data:', user);
 
         const verifiedUser = user.find((u) => u.username === username && u.password === password);
 

@@ -10,7 +10,7 @@ export default function Register() {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [passwordRe, setPasswordRe] = useState('');
-    const { user } = useUser();
+    const { user, setUser } = useUser();
     const navigate = useNavigate();
 
     const handleUsernameChange = (e: ChangeEvent<HTMLInputElement>) => {

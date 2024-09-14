@@ -47,7 +47,7 @@ export default function UserProvider({ children }: { children: ReactNode }) {
         };
 
         fetchUsers();
-    }, []);
+    }, [user]);
 
     return <UserContext.Provider value={{ user, setUser }}>{children}</UserContext.Provider>;
 }
